@@ -1,0 +1,19 @@
+current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+/home/snyy/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240119-84081-aosawa sitelibdir\=./.gem.20240119-84081-aosawa clean
+
+current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240119-84081-aosawa sitelibdir\=./.gem.20240119-84081-aosawa
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240119-84081-aosawa sitelibdir\=./.gem.20240119-84081-aosawa install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20240119-84081-aosawa/debug
+
+current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240119-84081-aosawa sitelibdir\=./.gem.20240119-84081-aosawa clean
