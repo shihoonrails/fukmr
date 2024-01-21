@@ -1,0 +1,30 @@
+/* スライド */
+.carousel {
+    padding: 5%;
+}
+
+.carousel-inner {
+    font-family: 'Philosopher' , serif;  
+    position: relative;
+}
+
+.carousel-caption h1 {
+    position: relative;
+    top: 50%;
+    font-size: 300%;
+}
+.carousel-caption p {
+    font-size: 150%;
+}
+
+
+.content-h {
+    position: relative;
+    font-size: 300%;
+    color: aliceblue;
+}
+.content-p {
+    position: relative;
+    font-size: 150%;
+    color: aliceblue;
+}
