@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_20_033438) do
   end
 
   create_table "active_storage_blobs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "key", null: false
+    t.string "key", limit: 191, null: false
     t.string "filename", null: false
     t.string "content_type"
     t.text "metadata"

@@ -31,10 +31,10 @@ Setting libpath to /usr/lib/x86_64-linux-gnu
 creating Makefile
 
 current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/mysql2-0.5.5/ext/mysql2
-make DESTDIR\= sitearchdir\=./.gem.20240119-84081-4j1qj0 sitelibdir\=./.gem.20240119-84081-4j1qj0 clean
+make DESTDIR\= sitearchdir\=./.gem.20240123-6641-gfzazv sitelibdir\=./.gem.20240123-6641-gfzazv clean
 
 current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/mysql2-0.5.5/ext/mysql2
-make DESTDIR\= sitearchdir\=./.gem.20240119-84081-4j1qj0 sitelibdir\=./.gem.20240119-84081-4j1qj0
+make DESTDIR\= sitearchdir\=./.gem.20240123-6641-gfzazv sitelibdir\=./.gem.20240123-6641-gfzazv
 compiling client.c
 In file included from client.c:15:
 mysql_enc_name_to_ruby.h: In function ‘mysql2_mysql_enc_name_to_rb_hash’:
@@ -85,8 +85,8 @@ cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ 
 linking shared-object mysql2/mysql2.so
 
 current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/mysql2-0.5.5/ext/mysql2
-make DESTDIR\= sitearchdir\=./.gem.20240119-84081-4j1qj0 sitelibdir\=./.gem.20240119-84081-4j1qj0 install
-/usr/bin/install -c -m 0755 mysql2.so ./.gem.20240119-84081-4j1qj0/mysql2
+make DESTDIR\= sitearchdir\=./.gem.20240123-6641-gfzazv sitelibdir\=./.gem.20240123-6641-gfzazv install
+/usr/bin/install -c -m 0755 mysql2.so ./.gem.20240123-6641-gfzazv/mysql2
 
 current directory: /mnt/c/users/snyy/onedrive/ドキュメント/fukmr/vendor/bundle/ruby/3.2.0/gems/mysql2-0.5.5/ext/mysql2
-make DESTDIR\= sitearchdir\=./.gem.20240119-84081-4j1qj0 sitelibdir\=./.gem.20240119-84081-4j1qj0 clean
+make DESTDIR\= sitearchdir\=./.gem.20240123-6641-gfzazv sitelibdir\=./.gem.20240123-6641-gfzazv clean
