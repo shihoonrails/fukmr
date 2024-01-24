@@ -1,0 +1,33 @@
+/* スライド */
+.body { 
+    padding-top: 5rem; 
+}
+.color {
+    color: azure;
+}
+
+.carousel-inner img {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    height: auto;
+}
+.carousel-inner{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 100% ;
+    font-family: 'Philosopher' , serif;
+}
+
+.carousel-inner img {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    height: auto;
+}
+.carousel-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 100% ;
+    font-family: 'Philosopher' , serif;
+}
