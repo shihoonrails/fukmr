@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :uploads
+  resources :uploads, only: [:index, :create, :destroy, :new, :show, :edit, :update]
   root to: 'uploads#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

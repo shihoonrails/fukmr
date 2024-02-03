@@ -10,47 +10,27 @@
     <!-- ヘッダー -->
     <header>
        <!-- ナビ -->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" >Fukuoka view</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Link
-                                </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Scenery</a></li>
-                                <li><a class="dropdown-item" href="#">Coffee</a></li>
-                                <li><a class="dropdown-item" href="#">Hot spring</a></li>
-                                <li><a class="dropdown-item" href="#">Restaurant</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Your New Post</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <%= link_to "Fukuoka View", uploads_path, class: "navbar-brand" %>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <li class="nav-item">
+                <%= link_to "New Post", new_upload_path, class: "nav-link active", "aria-current" => "page" %>
+              </li>
             </div>
-        </nav>
-    
+          </div>
+        </div>
+      </nav>
+
       <!-- メニューなどの共通要素 -->
     </header>
-    
+
     <!-- メインコンテンツ -->
     <main>
       <%= yield %>
     </main>
-    
+
     <!-- フッター -->
     <footer>
       <!-- フッターコンテンツ -->

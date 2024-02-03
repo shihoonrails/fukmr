@@ -1,10 +1,23 @@
 <p style="color: green"><%= notice %></p>
-
 <%= render @upload %>
 
-<div>
-  <%= link_to "Edit this upload", edit_upload_path(@upload) %> |
-  <%= link_to "Back to uploads", uploads_path %>
+<p>
+  <strong>Image:</strong>
+  <%#= @upload.image %>
+  <%= image_tag @upload.image_url( :thumb) if @upload.image.present? %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @upload.title %>
+</p>
+
+<p>
+  <%= @upload.body %>
+</p>
+
+  <%= link_to "先ほどのページへ", edit_upload_path(@upload) %> |
+  <%= link_to "ホームへ", uploads_path %>
 
   <%= button_to "Destroy this upload", @upload, method: :delete %>
 </div>

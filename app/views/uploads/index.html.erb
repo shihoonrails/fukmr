@@ -1,70 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Fukuoka</title>
-</head>
-
-<body>
-    <header class="page-header wrapper">
-        <h1><a href="index.html"><img class="logo" src="images/logo.jpg" alt="Fukuoka"></a></h1>
-        <nav>
-            <ul class="main-nav">
-                <li><a href="top.html">Top</a></li>
-                <li><a href="upload.html">Upload</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="home-content wrapper">
-         <h2 class="page-title">Fukuoka view</h2>
-         <p class="p">福岡のおすすめスポットをご紹介・ご覧いただけるサイトです</p>
-         <br>
-         <a class="button" href="upload.html">Click to upload</a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fukuoka view</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= image_tag 'body.jpg', class: 'd-block w-100' %>
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Fukuoka view</h2>
+            <p>福岡は自然と都会が融合しており、美味しいごはんも多い素敵な空間が広がっています
+              <br>このサイトでは、訪れた際に心に残る場所や、
+              <br>他の人にも是非訪れてほしい特別な場所を紹介し合うコミュニティです。
+              <br>どんどん投稿して共有しましょう。</p>
+          </div>
         </div>
-
-        <div class="home">
-          <div class="text">
-            <h3>Scenery</h3>
-            <p>景色</p>
+        <div class="carousel-item">
+          <%= image_tag 'body01.jpg', class: 'd-block w-100' %>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Scenic Beauty / 景色</h5>
+            <p>福岡の美しい景色は四季折々に魅了されます。
+              <br>博多湾からの夕日や、糸島の青い海、丘陵地帯の緑豊かな風景が心を癒します。
+              <br>また、福岡タワーや城跡からの眺望は絶景で、訪れる価値があります。</p>
           </div>
-          <div class="pict"><a href="scenery.html"><img src="images/body01.jpg" alt="body01"></a></div>
         </div>
-
-        <div class="home">
-          <div class="text">
-            <h3>Coffee</h3>
-            <p>カフェ</p>
+        <div class="carousel-item">
+          <%= image_tag 'body02.jpg', class: 'd-block w-100' %>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Caffe / 珈琲</h5>
+            <p>福岡はカフェ文化が盛んで、個性的なカフェが点在しています。
+              <br>歴史ある博多の街並みで楽しむモダンなカフェや、古民家を活かしたアンティークな雰囲気のお店など、
+              <br>ここでしか味わえない癒しの空間が広がっています。</p>
           </div>
-          <div class="pict"><img src="images/body02.jpg" alt="body02"></div>
-          </div>
-        
-
-        <div class="home">
-          <div class="text">
-            <h3>Hot spring</h3>
-            <p>温泉</p>
-          </div>
-          <div class="pict"><img src="images/body03.jpg" alt="body03"></div>
         </div>
-      
-        <div class="home">
-          <div class="text">
-            <h3>Restaurant</h3>
-            <p>お食事処</p>
+        <div class="carousel-item">
+          <%= image_tag 'body03.jpg', class: 'd-block w-100' %>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Gourmet / 御食事処</h5>
+            <p>福岡のごはんは新鮮で美味しいものが豊富です。
+              <br>博多ラーメンやもつ鍋はもちろん、糸島の海の幸や筑前煮など、
+              <br>地元の食材を活かした料理が楽しめます。食通も唸るグルメの宝庫です。</p>
           </div>
-          <div class="pict"><img src="images/body04.jpg" alt="body04"></div>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag 'body04.jpg', class: 'd-block w-100' %>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Thermal Springs / 温泉</h5>
+            <p>福岡周辺には温泉地も点在しており、疲れた体を癒す絶好の場所です。
+              <br>湯布院や別府までのアクセスも良く、美肌の湯や泉質の異なる温泉地で
+              <br>心地よい時間を過ごせます。</p>
           </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</body>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="newpost">
+    <% @uploads.each do |upload| %>
+    <p>
+      <strong>Title:</strong>
+      <%= upload.title if upload.title.present? %>
+    </p>
+    <p>
+      <%= image_tag upload.image_url( :thumb) if upload.image.present? %>
+    </p>
+    <p>
+      <%= upload.body if upload.body.present? %>
+    </p>
+    <% end %>
 
-
+    <% if @uploads.blank? %>
+     <p>No uploads found</p>
+    <% end %>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
 </html>
