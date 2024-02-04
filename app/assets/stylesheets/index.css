@@ -10,3 +10,12 @@
 .newpost {
     font-family: 'Philosopher' , serif;
 }
+
+  
+  /* 携帯画面用スタイル（例：画面幅が 768px 以下） */
+  @media (max-width: 768px) {
+    .carousel-caption {
+      font-size: 20%; /* 小さめのサイズに調整 */
+    }
+  }
+  

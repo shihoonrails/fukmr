@@ -1,0 +1,22 @@
+/* form-groupのスタイルを上書き */
+.formrun {
+    width: 100%;
+    height: auto;
+    margin-left: 10%;
+    padding-right: 20%; 
+}
+
+.form-group.mx-auto {
+    flex-direction: column; /* 子要素を縦に配置 */
+    align-items: center; /* 子要素を中央寄せ */
+  }
+  
+  /* form-group内の.col-sm-10を上書き */
+  .form-group.mx-auto .col-sm-10 {
+    width: 100%; /* 幅を100%に設定 */
+    margin-top: 10px; /* 上部の余白を調整 */
+  }
+
+  .post {
+    margin-top: 2%;
+  }
