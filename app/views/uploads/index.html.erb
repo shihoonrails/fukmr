@@ -21,46 +21,47 @@
           <%= image_tag 'body.jpg', class: 'd-block w-100' %>
           <div class="carousel-caption">
             <h2>Fukuoka view</h2>
-            <p>福岡は自然と都会が融合しており、美味しいごはんも多い素敵な空間が広がっています
-              <br>このサイトでは、訪れた際に心に残る場所や、
+            <h5>福岡は自然と都会が融合しており、素敵な空間が広がっています
+              <br>このサイトでは、訪れた際に心に残る場所や美味しいごはんなど
               <br>他の人にも是非訪れてほしい特別な場所を紹介し合うコミュニティです。
-              <br>どんどん投稿して共有しましょう。</p>
+              <br>どんどん投稿して共有しましょう。</h5>
           </div>
         </div>
         <div class="carousel-item">
           <%= image_tag 'body01.jpg', class: 'd-block w-100' %>
           <div class="carousel-caption">
-            <h5>Scenic Beauty / 景色</h5>
-            <p>福岡の美しい景色は四季折々に魅了されます。
+            <h2>Scenic Beauty / 景色</h2>
+            <h5>福岡の美しい景色は四季折々に魅了されます。
               <br>博多湾からの夕日や、糸島の青い海、丘陵地帯の緑豊かな風景が心を癒します。
-              <br>また、福岡タワーや城跡からの眺望は絶景で、訪れる価値があります。</p>
+              <br>また、福岡タワーや城跡からの眺望は絶景で、訪れる価値があります。</h5>
           </div>
         </div>
         <div class="carousel-item">
           <%= image_tag 'body02.jpg', class: 'd-block w-100' %>
           <div class="carousel-caption">
-            <h5>Caffe / 珈琲</h5>
-            <p>福岡はカフェ文化が盛んで、個性的なカフェが点在しています。
-              <br>歴史ある博多の街並みで楽しむモダンなカフェや、古民家を活かしたアンティークな雰囲気のお店など、
-              <br>ここでしか味わえない癒しの空間が広がっています。</p>
+            <h2>Caffe / 珈琲</h2>
+            <h5>福岡はカフェ文化が盛んで、個性的なカフェが点在しています。
+              <br>歴史ある博多の街並みで楽しむモダンなカフェや、
+              <br>古民家を活かしたアンティークな雰囲気のお店など、
+              <br>ここでしか味わえない癒しの空間が広がっています。</h5>
           </div>
         </div>
         <div class="carousel-item">
           <%= image_tag 'body03.jpg', class: 'd-block w-100' %>
           <div class="carousel-caption">
-            <h5>Gourmet / 御食事処</h5>
-            <p>福岡のごはんは新鮮で美味しいものが豊富です。
+            <h2>Gourmet / 御食事処</h2>
+            <h5>福岡のごはんは新鮮で美味しいものが豊富です。
               <br>博多ラーメンやもつ鍋はもちろん、糸島の海の幸や筑前煮など、
-              <br>地元の食材を活かした料理が楽しめます。食通も唸るグルメの宝庫です。</p>
+              <br>地元の食材を活かした料理が楽しめます。食通も唸るグルメの宝庫です。</h5>
           </div>
         </div>
         <div class="carousel-item">
           <%= image_tag 'body04.jpg', class: 'd-block w-100' %>
           <div class="carousel-caption">
-            <h5>Thermal Springs / 温泉</h5>
-            <p>福岡周辺には温泉地も点在しており、疲れた体を癒す絶好の場所です。
+            <h2>Thermal Springs / 温泉</h2>
+            <h5>福岡周辺には温泉地も点在しており、疲れた体を癒す絶好の場所です。
               <br>湯布院や別府までのアクセスも良く、美肌の湯や泉質の異なる温泉地で
-              <br>心地よい時間を過ごせます。</p>
+              <br>心地よい時間を過ごせます。</h5>
           </div>
         </div>
       </div>
@@ -73,23 +74,32 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <div class="newpost">
-    <% @uploads.each do |upload| %>
-    <p>
-      <strong>Title:</strong>
-      <%= upload.title if upload.title.present? %>
-    </p>
-    <p>
-      <%= image_tag upload.image_url( :thumb) if upload.image.present? %>
-    </p>
-    <p>
-      <%= upload.body if upload.body.present? %>
-    </p>
-    <% end %>
+    <div class="btn-container">
+      <%= link_to "New Post", new_user_session_path, class: "btn-custom" %>
+    </div>
 
-    <% if @uploads.blank? %>
-     <p>No uploads found</p>
-    <% end %>
+    <div class="newpost">
+      <% @uploads.each do |upload| %>
+      <p>
+        <strong>Title:</strong>
+        <%= upload.title if upload.title.present? %>
+      </p>
+      <p>
+        <%= image_tag upload.image_url( :thumb) if upload.image.present? %>
+      </p>
+      <p>
+        <%= upload.body if upload.body.present? %>
+      </p>
+
+      <%= link_to "投稿を見る", @upload %>
+      <% end %>
+
+      <% if @uploads.blank? %>
+      <p>未投稿</p>
+      <% end %>
+
+      
+      
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>

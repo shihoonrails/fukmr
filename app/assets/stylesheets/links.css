@@ -1,0 +1,11 @@
+/* custom.css */
+.custom-text {
+    font-family: 'Philosopher' , serif;
+    text-decoration: none;
+    color: #777777; /* 任意の色を指定 */
+    font-size: 1.4vw; /* 任意のフォントサイズを指定 */
+  }
+  .custom-text:hover {
+    color: #000; /* ホバー時の色（通常時と同じにすることで変化が見えなくなります） */
+  }
+  

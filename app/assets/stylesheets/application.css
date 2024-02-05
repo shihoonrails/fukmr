@@ -1,15 +1,34 @@
+
 .header {
     width: 100%;
     height: auto;
 }
-
-.navbar {
-    font-family: 'Philosopher' , serif;
+.navbar-nav .nav-link {
+  font-family: 'Philosopher' , serif;
+  
 }
 
-.body {
-    font-family: 'Philosopher' , serif;
+/* カスタムスタイル */
+.custom-text  {
+  font-family: 'Philosopher' , serif;
+  text-decoration: none;
+  color: #000; /* 任意の色を指定 */
+  font-size: 2vw; /* 任意のフォントサイズを指定 */
 }
+.custom-text:hover {
+  color: #000; /* ホバー時の色（通常時と同じにすることで変化が見えなくなります） */
+}
+
+ /* 携帯画面用スタイル（例：画面幅が 768px 以下） */
+ @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 3vw;
+    }
+    .navbar-nav .nav-link {
+      font-family: 'Philosopher' , serif;
+      font-size: 3vw;
+    }
+  }
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

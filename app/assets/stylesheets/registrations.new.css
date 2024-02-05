@@ -1,0 +1,58 @@
+/* registrations.new.css */
+body {
+    font-family: 'Philosopher', serif;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 画面の高さいっぱいに表示するため */
+  }
+  
+  .registrations-form, .login-form {
+    max-width: 400px; /* フォームの最大幅 */
+    width: 100%;
+    padding: auto;
+    margin: 0 auto; /* 中央寄せ */
+  }
+
+  .login-form h2 {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%; /* 20に単位を追加 */
+    font-family: 'Philosopher', serif;
+    font-size: 2.5vw; /* 画面の幅に対する相対的なサイズ（Viewport Width） */
+  }
+  
+  .registrations-form h2 {
+    text-align: center;
+    margin-bottom: 20px; /* 20に単位を追加 */
+    font-family: 'Philosopher', serif;
+    font-size: 2.5vw; /* 画面の幅に対する相対的なサイズ（Viewport Width） */
+  }
+  
+  .field {
+    font-size: 1.5vw;
+    margin-bottom: 1%; /* 1%に単位を追加 */
+    text-align: center;
+  }
+  
+  .actions {
+    margin-top: 5%;
+    font-size: 1.3vw;
+    text-align: center;
+  }
+  .registrations-form p {
+    margin-top: 5%;
+    font-size: 0.8vw; /* 任意のフォントサイズを指定 */
+    text-align: center;
+  }
+
+  .login-form p {
+    margin-top: 5%;
+    font-size: 0.8vw; /* 任意のフォントサイズを指定 */
+    text-align: center;
+  }
+  
+  

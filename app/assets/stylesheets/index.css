@@ -7,15 +7,49 @@
     font-family: 'Philosopher' , serif;
 }
 
+.carousel-caption h2 {
+  font-size: 3vw; /* 画面幅に対する相対的なサイズ */
+  /* 他のスタイルも適用できる */
+}
+.carousel-caption h5  {
+  font-size: 2vw;
+}
+
+
+/* app/assets/stylesheets/application.css */
+.btn-container {
+  text-align: center;
+  margin-top: 40px; /* 上部のマージン */
+  margin-bottom: 40px; /* 下部のマージン */
+}
+
+.btn-custom {
+  font-family: 'Philosopher', serif;
+  font-size: 3vw;
+  background-color: #fff; /* 白 */
+  color: #5a5a5a; /* 黒 */
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom:hover {
+  color: #000000; /* ホバー時の文字色 */
+}
+
+
 .newpost {
     font-family: 'Philosopher' , serif;
 }
 
   
-  /* 携帯画面用スタイル（例：画面幅が 768px 以下） */
+  /* 携帯画面用スタイル（画面幅：768px 以下） */
   @media (max-width: 768px) {
-    .carousel-caption {
-      font-size: 20%; /* 小さめのサイズに調整 */
+    .h2 {
+      font-size: 20%; 
+    }
+    .h5 {
+      font-size: 10%;
     }
   }
   
