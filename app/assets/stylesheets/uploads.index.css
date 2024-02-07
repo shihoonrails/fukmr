@@ -40,9 +40,53 @@
 
 .newpost {
     font-family: 'Philosopher' , serif;
+    text-align: left;
 }
 
+.post-item {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.title {
+  text-align: left;
+  margin-left: 4%;
+  font-size: 1.25vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 400px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.img-thumbnail {
+  margin-left: 4%;
+}
+
+.body {
+  text-align: center;
+  margin-left: 4%;
+  margin-right: 4%;
+  font-size: 0.5vw;
+}
+
+.link-container {
+  text-align: center;
+  margin-top: 1em; /* 適切な余白を設定してください */
+}
+
+.view-link {
+  /* 必要に応じてスタイルを追加してください */
+}
+
+
   
+
+
+
   /* 携帯画面用スタイル（画面幅：768px 以下） */
   @media (max-width: 768px) {
     .h2 {

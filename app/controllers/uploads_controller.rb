@@ -47,21 +47,23 @@ class UploadsController < ApplicationController
     end
   end
 
-  # DELETE /uploads/1 or /uploads/1.json
-  def destroy
-    @upload = Upload.find(params[:id])
-    if @upload.destroy
-      respond_to do |format|
-        format.html { redirect_to uploads_url, notice: "Upload was successfully destroyed." }
-        format.json { head :no_content }
-      end
-    else
-      respond_to do |format|
-        format.html { redirect_to uploads_url, alert: "Failed to destroy upload." }
-        format.json { render json: { error: "Failed to destroy upload." }, status: :unprocessable_entity }
-      end
+
+# DELETE /uploads/1 or /uploads/1.json
+def destroy
+  @upload = Upload.find(params[:id])
+  if @upload.destroy
+    respond_to do |format|
+      format.html { redirect_to uploads_url, notice: "Upload was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  else
+    respond_to do |format|
+      format.html { redirect_to uploads_url, alert: "Failed to destroy upload." }
+      format.json { render json: { error: "Failed to destroy upload." }, status: :unprocessable_entity }
     end
   end
+end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

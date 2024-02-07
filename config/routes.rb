@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  resources :comments
+  get 'users/show'
 
   resources :uploads, only: [:index, :create, :destroy, :new, :show, :edit, :update]
   root to: 'uploads#index'
   
   get 'home/top'
+
+  resource :user, except: [:new, :create, :destroy]
   
   devise_for :users do
 

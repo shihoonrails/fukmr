@@ -1,0 +1,18 @@
+.newpost {
+    font-family: 'Philosopher' , serif;
+    text-align: center;
+    margin-top: 5%;
+}
+
+/* app/assets/stylesheets/application.css */
+
+.custom-link {
+    color: gray; 
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .custom-link:hover {
+    color: black; 
+  }
+  

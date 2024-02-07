@@ -5,18 +5,26 @@
 }
 .navbar-nav .nav-link {
   font-family: 'Philosopher' , serif;
-  
 }
 
-/* カスタムスタイル */
 .custom-text  {
   font-family: 'Philosopher' , serif;
   text-decoration: none;
-  color: #000; /* 任意の色を指定 */
-  font-size: 2vw; /* 任意のフォントサイズを指定 */
+  color: #000; 
+  font-size: 2vw; 
 }
 .custom-text:hover {
-  color: #000; /* ホバー時の色（通常時と同じにすることで変化が見えなくなります） */
+  color: #000; 
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Philosopher' , serif;
+  color: #000; 
+  font-size: 3vw;
+}
+
+.navbar-nav .nav-link :hover {
+  color: #000;
 }
 
  /* 携帯画面用スタイル（例：画面幅が 768px 以下） */

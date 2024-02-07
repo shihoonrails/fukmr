@@ -2,6 +2,10 @@
 body {
     font-family: 'Philosopher', serif;
   }
+
+  main {
+    margin-top: 5%;
+  }
   
   .container {
     display: flex;

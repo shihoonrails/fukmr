@@ -1,23 +1,38 @@
-<p style="color: green"><%= notice %></p>
-<%= render @upload %>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fukuoka view</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'uploads.show', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<p>
-  <strong>Image:</strong>
-  <%#= @upload.image %>
-  <%= image_tag @upload.image_url( :thumb) if @upload.image.present? %>
-</p>
+  <main class="text-center margin-top-10"> <!-- 中央寄せ + 上部余白 -->
+    <div class="container container-mt-4"> <!-- 通常の上下の余白 -->
+      <p class="custom-font">
+        <strong>Image:</strong>
+        <%#= @upload.image %>
+        <%= image_tag @upload.image_url(:thumb), class: "img-fluid" if @upload.image.present? %>
+      </p>
+  
+      <p class="custom-font">
+        <strong>Title:</strong>
+        <%= @upload.title %>
+      </p>
+  
+      <p class="custom-font">
+        <%= @upload.body %>
+      </p>
+  
+      <%= link_to "ホームへ", uploads_path %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @upload.title %>
-</p>
+      <%= button_to "Destroy this upload", @upload, method: :delete %>
 
-<p>
-  <%= @upload.body %>
-</p>
+    </div>
+  </main>
+  
+  
 
-  <%= link_to "先ほどのページへ", edit_upload_path(@upload) %> |
-  <%= link_to "ホームへ", uploads_path %>
-
-  <%= button_to "Destroy this upload", @upload, method: :delete %>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>
