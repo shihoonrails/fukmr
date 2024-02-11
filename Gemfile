@@ -72,3 +72,5 @@ gem 'mini_magick'
 gem 'devise'
 
 gem 'initial_avatar'
+
+gem 'aws-sdk-s3', require: false

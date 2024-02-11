@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  resources :comments
-  get 'users/show'
+  root to: 'blogs#index'
 
-  resources :uploads, only: [:index, :create, :destroy, :new, :show, :edit, :update]
-  root to: 'uploads#index'
-  
-  get 'home/top'
+  resources :blogs, only: [:index, :create, :destroy, :new, :show, :edit, :update]
 
   resource :user, except: [:new, :create, :destroy]
   

@@ -2,9 +2,11 @@
 .header {
     width: 100%;
     height: auto;
+    background-color: white;
 }
 .navbar-nav .nav-link {
   font-family: 'Philosopher' , serif;
+
 }
 
 .custom-text  {
@@ -12,6 +14,7 @@
   text-decoration: none;
   color: #000; 
   font-size: 2vw; 
+  font-weight: bold;
 }
 .custom-text:hover {
   color: #000; 
@@ -26,6 +29,11 @@
 .navbar-nav .nav-link :hover {
   color: #000;
 }
+
+.fa-user .fa-user-minus .fa-user-plus .fa-square-plus {
+  font-size: 2vw; /* 画面幅の2%に調整 */
+}
+
 
  /* 携帯画面用スタイル（例：画面幅が 768px 以下） */
  @media (max-width: 768px) {

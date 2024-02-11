@@ -1,26 +1,65 @@
-.carousel-inner {
-    color: black;
-    font-family: 'Philosopher' , serif;
+.main {
+  font-family: 'Philosopher' , serif;
+}
+
+.show {
+  margin-top: 5%;
+  padding-top: 5%;
+}
+
+/* インディケーターのボタン */
+.carousel-indicators button {
+  width: 2%; /* ボタンの幅を画面幅の2%に調整 */
+  height: 2%; /* ボタンの高さを画面幅の2%に調整 */
+  margin: 0 1%; /* ボタン同士のマージン */
+  background-color: #888; /* ボタンの色 */
+  border: none;
+  opacity: 0.7; /* 初期状態の透明度 */
+  transition: opacity 0.3s ease; /* インディケーターの透明度の変化をアニメーション化 */
+}
+.carousel-indicators button.active {
+  background-color: #555; /* アクティブ時のボタンの色 */
+  opacity: 1; /* アクティブ時の透明度 */
+}
+
+
+#carouselExampleCaptions {
+  max-width: 90%; 
+  height: auto;
+  margin: auto; 
+  margin-top: 5%;
+  position: relative; 
+  text-align: center; 
+}
+
+
+.carousel-caption {
+  font-family: 'Philosopher', serif;
+  font-size: 2vw;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* 黒のRGB値と透明度を指定 */
+  padding-top: 3%;
 }
 
 .carousel-item {
-    font-family: 'Philosopher' , serif;
-}
-
-.carousel-caption h2 {
-  font-size: 3vw; /* 画面幅に対する相対的なサイズ */
-  /* 他のスタイルも適用できる */
-}
-.carousel-caption h5  {
+  font-family: 'Philosopher' , serif;
   font-size: 2vw;
 }
 
+.carousel-inner {
+    color: black;
+}
 
-/* app/assets/stylesheets/application.css */
 .btn-container {
   text-align: center;
-  margin-top: 40px; /* 上部のマージン */
-  margin-bottom: 40px; /* 下部のマージン */
+  margin-top: 40px; 
+  margin-bottom: 40px;
 }
 
 .btn-custom {
@@ -75,25 +114,102 @@
 
 .link-container {
   text-align: center;
-  margin-top: 1em; /* 適切な余白を設定してください */
+  margin-top: 1em; 
 }
+
+/* styles.css */
+
+.post {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* ユーザー名とタイトルの間隔を調整 */
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #555; /* ユーザーアバターの背景色 */
+}
+
+.username {
+  margin-left: 10px; 
+}
+
+.content-col {
+  padding-left: 20px; /* image との間隔を調整 */
+}
+
+.text-center {
+  text-align: center;
+}
+
+h2 {
+  color: #e7e5e5;
+}
+
+.h3 {
+  color: #424242;
+}
+
+p {
+  color: #e7e5e5;
+}
+
+.post-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+.responsive-image {
+  width: 100%; /* 画面幅に対して100% */
+  height: auto; /* アスペクト比を維持しつつ幅に合わせて変化 */
+}
+
 
 .view-link {
-  /* 必要に応じてスタイルを追加してください */
+  color: #1da1f2;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+.view-link:hover {
+  text-decoration: underline;
+}
 
-  
+.no-posts {
+  color: #333;
+  font-style: italic;
+}
+
+/* styles.css */
 
 
 
-  /* 携帯画面用スタイル（画面幅：768px 以下） */
-  @media (max-width: 768px) {
-    .h2 {
-      font-size: 20%; 
-    }
-    .h5 {
-      font-size: 10%;
-    }
+
+
+  /* 携帯画面用スタイル */
+@media screen and (max-width: 768px) {
+  .carousel-caption h2 {
+    font-size: 5vw; 
   }
+  .carousel-caption p {
+    font-size: 2vw; 
+  }
+}
+
   
