@@ -132,7 +132,24 @@ GEM
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
+    excon (0.109.0)
     ffi (1.16.3)
+    fog-aws (3.21.0)
+      fog-core (~> 2.1)
+      fog-json (~> 1.1)
+      fog-xml (~> 0.1)
+    fog-core (2.4.0)
+      builder
+      excon (~> 0.71)
+      formatador (>= 0.2, < 2.0)
+      mime-types
+    fog-json (1.2.0)
+      fog-core
+      multi_json (~> 1.10)
+    fog-xml (0.1.4)
+      fog-core
+      nokogiri (>= 1.5.11, < 2.0.0)
+    formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -153,6 +170,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jmespath (1.6.2)
+    kgio (2.11.4)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -163,10 +181,14 @@ GEM
       net-smtp
     marcel (1.0.2)
     matrix (0.4.2)
+    mime-types (3.5.2)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2024.0206)
     mini_magick (4.12.0)
     mini_mime (1.1.5)
     minitest (5.21.2)
     msgpack (1.7.2)
+    multi_json (1.15.0)
     mutex_m (0.2.0)
     mysql2 (0.5.5)
     net-imap (0.4.9.1)
@@ -235,6 +257,7 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
+    raindrops (0.20.1)
     rake (13.1.0)
     rdoc (6.6.2)
       psych (>= 4.0.0)
@@ -272,6 +295,9 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    unicorn (6.1.0)
+      kgio (~> 2.6)
+      raindrops (~> 0.7)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.1)
@@ -303,6 +329,7 @@ DEPENDENCIES
   carrierwave
   debug
   devise
+  fog-aws
   image_processing (~> 1.2)
   importmap-rails
   initial_avatar
@@ -316,6 +343,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  unicorn
   web-console
 
 RUBY VERSION

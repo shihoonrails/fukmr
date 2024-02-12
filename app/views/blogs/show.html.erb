@@ -16,7 +16,10 @@
 
         <div>
           <%= link_to "ホームへ", blogs_path %>
-          <%= button_to "投稿を削除", blog_path(@blog), method: :delete %>
+          <%= button_to blog_path(@blog), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
+             <i class="fa-solid fa-trash"></i> 削除
+          <% end %>
+
         </div>
       </div>
 

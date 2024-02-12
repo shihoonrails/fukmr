@@ -74,3 +74,8 @@ gem 'devise'
 gem 'initial_avatar'
 
 gem 'aws-sdk-s3', require: false
+gem 'fog-aws'
+
+group :production, :staging do
+  gem 'unicorn'
+end
