@@ -12,12 +12,24 @@
         <div class="my-1">
             <div class="container mt-5">
                 <div class="row">
-                    <div class="col-7 mx-auto">
+                    <div class="col-10 mx-auto">
                         <div class="card">
-                            <div class="card-body">
+                                <div class="user-avatar" id="avatar"> <!-- ① -->
+                                    <% if current_user && current_user.avatar.present? %>
+                                      <%= image_tag current_user.avatar, class: "mb-2 current-avatar", id: "avatar_preview" %>
+                                    <% else %>
+                                      <label for="avatarIcon">
+                                        <%= image_tag "default_avatar.jpg", class: "mb-2 current-avatar", id: "avatar_preview" %>
+                                      </label>
+                                      <input type="file" name="avatar" onchange="avatarImage(this);" accept="image/jpeg,image/gif,image/png" class="custom-file-input" id="avatarIcon" style="display: none;">
+                                    <% end %>
+                                    </div>
+                                <div class="card-body">
                                 <h5 class="card-title"><%= current_user.name %></h5>
                                 <h6 class="cars-subtitle mb-2 text=muted"><%= current_user.email %></h6>
-                                <%= link_to '編集', edit_user_path %>
+                                <div class="right">
+                                    <%= link_to '編集', edit_user_path %>
+                                </div>
                             </div>
                         </div>
                     </div>

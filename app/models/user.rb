@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :avatar, content_type: { in: %w[image/jpeg image/gif image/png],
              message: "有効なフォーマットではありません" },
              size: { less_than: 5.megabytes }
+  has_many :blogs
 end

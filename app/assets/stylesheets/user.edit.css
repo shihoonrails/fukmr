@@ -29,4 +29,25 @@ body {
   .btn-success:hover {
   background-color: rgb(59, 59, 59); /* カーソルが来た時のボタンの色は灰 */
   color: white; /* カーソルが来た時の文字の色は白 */
+  }
+
+/* スタイルの追加 */
+.user-avatar {
+  border-radius: 50%; /* 角を丸くする */
+  overflow: hidden;  /* 内容が枠からはみ出た場合にクリッピング */
+  width: 100px;      /* 幅の指定 */
+  height: 100px;     /* 高さの指定 */
+}
+
+/* カーソルが画像上にあるときにポインターに変更 */
+.user-avatar img {
+  cursor: pointer;
+}
+
+/* サイズ変更後の画像スタイル */
+.user-avatar img {
+  width: 100%; /* 親要素に対して100%の幅に設定 */
+  height: 100%; /* 親要素に対して100%の高さに設定 */
+  object-fit: cover; /* アスペクト比を保ちつつ親要素に収まるように調整 */
+  border-radius: 50%; /* 角を丸くする */
 }

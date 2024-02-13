@@ -27,10 +27,17 @@
             <div class="col-6 mx-auto">
             <h2>編集</h2>
             <%= form_for @user do |f| %>
-                <div class="user-avatar">
-                    <% if @user.avatar.attached? %>
-                      <%= image_tag @user.avatar, width: 200, class: "mb-2" %>
-                    <% end %>
+            <div class="user-avatar" id="avatar"> <!-- ① -->
+              <% if current_user && current_user.avatar.present? %>
+                <%= image_tag current_user.avatar, class: "mb-2 current-avatar", id: "avatar_preview" %>
+              <% else %>
+                <label for="avatarIcon">
+                  <%= image_tag "default_avatar.jpg", class: "mb-2 current-avatar", id: "avatar_preview" %>
+                </label>
+                <input type="file" name="avatar" onchange="avatarImage(this);" accept="image/jpeg,image/gif,image/png" class="custom-file-input" id="avatarIcon" style="display: none;">
+              <% end %>
+              </div>
+            </div>
                 </div>
                 <div class="form-group">
                 <label>ユーザー名</label>

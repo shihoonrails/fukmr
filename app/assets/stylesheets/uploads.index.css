@@ -11,6 +11,7 @@ p {
   color: #e7e5e5;
 }
 
+
 /* インディケーターのボタン */
 .carousel-indicators button {
   width: 2%; /* ボタンの幅を画面幅の2%に調整 */
@@ -165,8 +166,9 @@ p {
 }
 
 .username {
+  font-family: 'Philosopher' , serif;
   margin-left: 1.5%; 
-  font-size: 3.3vw;
+  font-size: 3vw;
 }
 
 .content-col {
@@ -175,12 +177,13 @@ p {
 
 .text-center {
   text-align: center;
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .text-left {
+  font-family: 'Philosopher' , serif;
   text-align: left;
-  font-size: 4vw;
+  font-size: 3.5vw;
 }
 
 h2 {
@@ -191,12 +194,17 @@ h2 {
   color: #424242;
 }
 
+.h5 {
+  font-size: 2vw;
+}
+
 .responsive-image {
   width: 100%; /* 画面幅に対して100% */
   height: auto; /* アスペクト比を維持しつつ幅に合わせて変化 */
 }
 
 .time-details {
+  font-family: 'Philosopher' , serif;
   display: flex;
   justify-content: space-between;
   align-items: baseline;

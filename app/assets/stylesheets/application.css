@@ -39,7 +39,8 @@
   font-size: 2vw;
 }
 .small-text {
-  font-size: 2.5vw; /* 適切なサイズに調整してください */
+  font-family: 'Philosopher' , serif;
+  font-size: 2vw; /* 適切なサイズに調整してください */
   margin-left: 1%;
 }
 
