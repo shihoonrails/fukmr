@@ -2,29 +2,45 @@
 
 <!-- _blog.html.erb -->
 
+<!-- _blog.html.erb -->
+
+<!-- _blog.html.erb -->
+
 <div id="<%= dom_id blog %>" class="post">
   <div class="text-center">
     <div class="user-details">
-      <div class="user-avatar">
-        <!-- ユーザーのアバター画像が表示される予定 -->
+      <div class="user-avatar" id="avatar"> <!-- ① -->
+        <% if current_user && current_user.avatar.present? %>
+          <%= image_tag current_user.avatar, class: "mb-2 current-avatar", id: "avatar_preview" %>
+        <% else %>
+          <label for="avatarIcon">
+            <%= image_tag "default_avatar.jpg", class: "mb-2 current-avatar", id: "avatar_preview" %>
+          </label>
+          <input type="file" name="avatar" onchange="avatarImage(this);" accept="image/jpeg,image/gif,image/png" class="custom-file-input" id="avatarIcon" style="display: none;">
+        <% end %>
       </div>
-      <span class="username">ユーザー名</span>
+      <h5 class="username"><%= current_user&.name %></h5>
     </div>
-    <h3 class="text-left"><%= blog.title %></h3> 
-    <div class="row">
-      <div class="col">
-        <%= image_tag(blog.image, size: "300x200", class: "responsive-image") if blog.image.present? %>
-      </div>
-      <div class="col content-col">
-        <span class"username"><%= blog.content %></span>
-      </div>
-    </div>
+
+    <h3 class="text-left"><%= blog.title %></h3> <!-- ③ -->
     <div class="post-details">
-      <span class="post-timestamp"><%= blog.created_at.strftime("%Y-%m-%d %H:%M") %></span>
-      <%= link_to "詳細を見る", blog, class: "view-link" %>
+      <div class="row">
+        <div class="col">
+          <%= image_tag(blog.image, size: "300x200", class: "responsive-image") if blog.image.present? %>
+        </div>
+        <div class="col content-col">
+          <span class="username"><%= blog.content %></span> <!-- ⑤ -->
+        </div>
+      </div>
     </div>
+    <div class="time-details">
+      <span class="post-timestamp"><%= blog.created_at.strftime("%Y-%m-%d %H:%M") %></span> <!-- ⑥ -->
+      <%= link_to "詳細を見る", blog, class: "view-link" %> <!-- ⑦ -->
+    </div>    
   </div>
 </div>
+
+
 
 
 

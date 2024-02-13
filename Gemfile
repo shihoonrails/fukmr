@@ -72,6 +72,7 @@ gem 'mini_magick'
 gem 'devise'
 
 gem 'initial_avatar'
+gem "active_storage_validations"
 
 gem 'aws-sdk-s3', require: false
 gem 'fog-aws'

@@ -1,62 +1,239 @@
-/* registrations.new.css */
+/* スタイルの基本設定 */
 body {
-    font-family: 'Philosopher', serif;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
 
-  main {
-    margin-top: 5%;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registrations-form {
+  font-family: 'Philosopher' , serif;
+  width: 90%;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 5%;
+  margin-top: 8%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* フォームのスタイル */
+.field {
+  margin-bottom: 1%;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+}
+
+/* アバター関連のスタイル */
+#avatar {
+  position: relative;
+  width: 10vw; /* アバターのサイズを調整 */
+  height: 10vw; /* アバターのサイズを調整 */
+  overflow: hidden;
+  border-radius: 50%; /* 丸くする */
+}
+
+.avatar-preview {
+  width: 100%;
+  height: 100%; /* 画像をまるく表示するためのスタイル */
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+.avatar-section {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* 画像も丸く表示するためのスタイル */
+}
+
+/* 登録済み画像のスタイル */
+.current-avatar {
+  width: 100%;
+  margin-top: 1%;
+  align-items: center;
+}
+
+.custom-file-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loginpage {
+  margin-top: 0;
+  font-size: 1vw;
+}
+
+/* チェックボックスと画像のスタイル */
+.form-check {
+  margin-top: 3vW;
+}
+
+/* アクションボタンのスタイル */
+.actions {
+  margin-top: 2%;
+  font-size: 1vw;
+}
+
+/* リンクのスタイル */
+.actions a {
+  margin-top: 1%;
+  text-decoration: none;
+}
+
+/* フッターのスタイル */
+footer {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
   }
   
   .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh; /* 画面の高さいっぱいに表示するため */
   }
   
-  .registrations-form, .login-form {
-    max-width: 400px; /* フォームの最大幅 */
-    width: 100%;
-    padding: auto;
-    margin: 0 auto; /* 中央寄せ */
-  }
-
-  .login-form h2 {
+  .registrations-form {
+    font-family: 'Philosopher' , serif;
+    width: 90%;
     text-align: center;
-    margin-top: 10%;
-    margin-bottom: 10%; /* 20に単位を追加 */
-    font-family: 'Philosopher', serif;
-    font-size: 2.5vw; /* 画面の幅に対する相対的なサイズ（Viewport Width） */
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 5%;
+    margin-top: 20%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .registrations-form h2 {
-    text-align: center;
-    margin-bottom: 20px; /* 20に単位を追加 */
-    font-family: 'Philosopher', serif;
-    font-size: 2.5vw; /* 画面の幅に対する相対的なサイズ（Viewport Width） */
-  }
-  
+  /* フォームのスタイル */
   .field {
-    font-size: 1.5vw;
-    margin-bottom: 1%; /* 1%に単位を追加 */
+    margin-bottom: 1%;
+    font-size: 5vw;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+  }
+  
+  /* アバター関連のスタイル */
+  #avatar {
+    position: relative;
+    width: 10vw; /* アバターのサイズを調整 */
+    height: 10vw; /* アバターのサイズを調整 */
+    overflow: hidden;
+    border-radius: 50%; /* 丸くする */
+  }
+  
+  .avatar-preview {
+    width: 100%;
+    height: 100%; /* 画像をまるく表示するためのスタイル */
+    border-radius: 50%;
+    object-fit: cover; 
+  }
+  
+  .avatar-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
   
+  #avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* 画像も丸く表示するためのスタイル */
+  }
+  
+  /* 登録済み画像のスタイル */
+  .current-avatar {
+    width: 100%;
+    margin-top: 1%;
+    align-items: center;
+  }
+  
+  .custom-file-input {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loginpage {
+    margin-top: 0;
+    font-size: 3vw;
+  }
+  
+  /* チェックボックスと画像のスタイル */
+  .form-check {
+    margin-top: 3vW;
+  }
+  
+  /* アクションボタンのスタイル */
   .actions {
-    margin-top: 5%;
-    font-size: 1.3vw;
-    text-align: center;
-  }
-  .registrations-form p {
-    margin-top: 5%;
-    font-size: 0.8vw; /* 任意のフォントサイズを指定 */
-    text-align: center;
-  }
-
-  .login-form p {
-    margin-top: 5%;
-    font-size: 0.8vw; /* 任意のフォントサイズを指定 */
-    text-align: center;
+    margin-top: 4%;
+    font-size: 5vw;
+    text-decoration: none;
   }
   
+  /* リンクのスタイル */
+  .actions a {
+    margin-top: 1%;
+    text-decoration: none;
+    font-size: 5vw;
+  }
+  
+  /* フッターのスタイル */
+  footer {
+    text-align: center;
+  }
+}
   
