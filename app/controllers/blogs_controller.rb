@@ -9,6 +9,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1 or /blogs/1.json
   def show
     @blog = Blog.find(params[:id])
+    @blogs = current_user
   end
 
   # GET /blogs/new
@@ -53,12 +54,17 @@ class BlogsController < ApplicationController
 
   # DELETE /blogs/1 or /blogs/1.json
   def destroy
-    @blog.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to blogs_url, notice: "Blog was successfully destroyed." }
-      format.json { head :no_content }
+    @blog = Blog.find(params[:id])
+  
+    # ユーザーが正しいかどうかを確認
+    if current_user == @blog.user
+      @blog.destroy
+      flash[:notice] = "Blog was successfully destroyed."
+    else
+      flash[:alert] = "You don't have permission to delete this blog."
     end
+  
+    redirect_to user_path(current_user)
   end
 
   private

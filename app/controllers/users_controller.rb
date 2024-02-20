@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   def show
     @user = current_user
-    @blogs = @user.blogs.order(created_at: :desc)
+    @blogs = @user.blogs.order(created_at: :desc) if @user
   end
 
   def edit

@@ -92,13 +92,12 @@ body {
   }
   
   /* アクションボタンのスタイル */
-  .actions {
+  .loginpage {
     margin-top: 5%;
   }
   
   /* リンクのスタイル */
   .actions a {
-    margin-top: 1rem;
     text-decoration: none;
   }
   

@@ -15,7 +15,7 @@
         <%= form_with(model: blog) do |form| %>
           <% if blog.errors.any? %>
             <div class="error">
-              <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+              <%= pluralize(blog.errors.count, "error") %>
     
               <ul>
                 <% blog.errors.each do |error| %>
@@ -41,16 +41,40 @@
             <%= form.text_area :content, placeholder: "どんな場所でしたか？" %>
           </div>
     
-            <div class="file-input">
-              <%= form.label :image, class: "file-label" do %>
-                <i class="far fa-image"></i>
-              <% end %>
-              <%= form.file_field :image, style: "display: none;" %>
+          <div class="file-input">
+            <%= form.label :image, class: "file-label" do %>
+              <i class="far fa-image"></i><div class="file">写真</div>
+            <% end %>
+            <%= form.file_field :image, style: "display: none;" %>
+            <div class="image-preview">
+              <img id="image-preview" >
             </div>
+          </div>
 
         <% end %>
       </div>
     </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const fileInput = document.querySelector('#blog_image');
+        const imagePreview = document.querySelector('#image-preview');
+    
+        fileInput.addEventListener('change', function() {
+          const file = this.files[0];
+    
+          if (file) {
+            const reader = new FileReader();
+    
+            reader.addEventListener('load', function() {
+              imagePreview.src = reader.result;
+            });
+    
+            reader.readAsDataURL(file);
+          }
+        });
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>

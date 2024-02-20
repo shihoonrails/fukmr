@@ -19,6 +19,7 @@ main {
 }
 
 .error {
+  font-size: 1vw;
   color: #e74c3c; /* エラーメッセージの色を変更 */
   font-weight: bold; /* エラーメッセージを太字にする */
 }
@@ -46,13 +47,6 @@ label {
   color: #333;
 }
 
-
-.file-input label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 input[type="text"],
 textarea {
   font-size: 1vw;
@@ -74,7 +68,7 @@ textarea {
 }
 
 .file-input i {
-  font-size: 1.5vw;
+  font-size: 2vw;
   color: #666;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -84,6 +78,18 @@ textarea {
 
 .file-input:hover i {
   color: #333;
+}
+
+.file {
+  font-size: 1vw;
+}
+
+
+.image-preview img {
+  max-width: 50%;
+  max-height: 70%;
+  margin: 3%;
+  border-radius: 5%;
 }
 
 .submit-button {
