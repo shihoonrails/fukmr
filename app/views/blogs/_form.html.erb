@@ -24,31 +24,30 @@
               </ul>
             </div>
           <% end %>
-    
-          <div>
-            <%= form.label :title, id: "title" %>
-            <%= form.text_field :title %>
+
+          <div class="submit-button">
+            <%= button_tag type: "submit" do %>
+              <i class="far fa-paper-plane"></i><div class="new">投稿</div>
+            <% end %>
           </div>
     
           <div>
-            <%= form.label :content, id: "content" %>
-            <%= form.text_area :content %>
+            <%= form.label :title, raw('<i class="fas fa-map-marker-alt"></i>場所・お店'), id: "title" %>
+            <%= form.text_field :title, placeholder: "おすすめの場所を教えてください。" %>
           </div>
     
-          <div class="btn">
+          <div>
+            <%= form.label :content, raw('<i class="fas fa-star"></i>ポイント'), id: "content" %>
+            <%= form.text_area :content, placeholder: "どんな場所でしたか？" %>
+          </div>
+    
             <div class="file-input">
               <%= form.label :image, class: "file-label" do %>
                 <i class="far fa-image"></i>
               <% end %>
               <%= form.file_field :image, style: "display: none;" %>
             </div>
-    
-            <div class="submit-button">
-              <%= button_tag type: "submit" do %>
-                <i class="far fa-paper-plane"></i>
-              <% end %>
-            </div>
-          </div>
+
         <% end %>
       </div>
     </main>

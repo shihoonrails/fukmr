@@ -1,60 +1,60 @@
-
 .header {
-    width: 100%;
-    height: auto;
-    background-color: white;
-}
-.navbar-nav .nav-link {
-  font-family: 'Philosopher' , serif;
-
-}
-
-.custom-text  {
-  font-family: 'Philosopher' , serif;
-  text-decoration: none;
-  color: #000; 
-  font-size: 2vw; 
-  font-weight: bold;
-}
-.custom-text:hover {
-  color: #000; 
+  width: 100%;
+  height: auto;
+  background-color: white;
+  font-family: 'Philosopher', serif;
 }
 
 .navbar-nav .nav-link {
-  font-family: 'Philosopher' , serif;
-  color: #000; 
+  display: flex;
+  align-items: center;
+  vertical-align: middle; 
   font-size: 1.5vw;
 }
 
-.navbar-toggler-icon {
-  font-size: 3vw;
+.custom-text {
+  font-family: 'Philosopher', serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 2vw;
 }
 
+.custom-text:hover {
+  color: #000;
+}
 
-.navbar-nav .nav-link :hover {
+.navbar-toggler-icon {
+  font-size: 2vw;
+}
+
+.navbar-nav .nav-link:hover {
   color: #000;
 }
 
 .icon {
-  font-size: 2vw;
+  font-size: 1.5vw;
+  margin-right: 5px;
 }
-.small-text {
-  font-family: 'Philosopher' , serif;
-  font-size: 2vw; /* 適切なサイズに調整してください */
+
+.icontext {
+  width: 7vw;
+  font-family: 'Philosopher', serif;
+  font-size: 1vw;
   margin-left: 1%;
+  margin-top: 2%;
 }
 
-
- /* 携帯画面用スタイル（例：画面幅が 768px 以下） */
- @media (max-width: 768px) {
-    .navbar-brand {
-      font-size: 3vw;
-    }
-    .navbar-nav .nav-link {
-      font-family: 'Philosopher' , serif;
-      font-size: 3vw;
-    }
+/* 携帯画面用スタイル（例：画面幅が 768px 以下） */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 3vw;
   }
+
+  .navbar-nav .nav-link {
+    font-size: 3vw;
+  }
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

@@ -1,26 +1,18 @@
 Rails.application.routes.draw do
-  root to: 'blogs#index'
 
-  resources :blogs, only: [:index, :create, :destroy, :new, :show, :edit, :update]
-
-  resource :user, except: [:new, :create, :destroy]
-  
   devise_for :users do
-
     devise_scope :user do
-      get 'sign_out', to: 'devise/sessions#destroy', as: :custom_destroy_user_session
+        get 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
+      end
     end
-    
-    devise_scope :user do
-      get 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
-    end
-    # ...
 
     # after_sign_out_path_for メソッドを定義
-    unauthenticated do
-      root :to => 'uploads#index', as: :unauthenticated_root
-    end
-  end
+
+  resource :user, except: [:new, :create, :destroy]
+
+  root to: 'blogs#index'
+  resources :blogs, only: [:index, :create, :destroy, :new, :show, :edit, :update]
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

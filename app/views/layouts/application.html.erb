@@ -26,38 +26,31 @@
             <div class="navbar-nav ms-auto">
               <% if user_signed_in? %>
                 <%= link_to new_user_session_path, class: "nav-link fs-6 fs-lg-5" do %>
-                <i class="fa-regular fa-square-plus icon"><span class="small-text">post</span></i>
+                  <i class="fa-regular fa-square-plus icon"></i>
+                  <span class="icontext">新規投稿</span>
                 <% end %>
-                <%= link_to user_path, class: "nav-link fs-6 fs-lg-5" do %>
-                  <i class="fa-solid fa-user icon"></i>Mypage
+                <%= link_to user_path, class: "nav-link fs-6 fs-lg-" do %>
+                  <i class="fa-solid fa-user icon"></i>
+                  <span class="icontext">マイページ</span>
                 <% end %>
                 <%= link_to destroy_user_session_path, method: :delete, class: "nav-link fs-6 fs-lg-5" do %>
-                  <i class="fa-solid fa-user-minus icon"></i>logout
+                  <i class="fa-solid fa-user-minus icon"></i>
+                  <span class="icontext">ログアウト</span>
                 <% end %>
               <% else %>
                 <%= link_to new_user_registration_path, class: "nav-link fs-6 fs-lg-5" do %>
-                  <i class="fa-solid fa-user-plus icon"></i>new
+                  <i class="fa-solid fa-user-plus icon"></i>
+                  <span class="icontext">サインアップ</span>
                 <% end %>
                 <%= link_to new_user_session_path, class: "nav-link fs-6 fs-lg-5" do %>
-                  <i class="fa-regular fa-user icon"></i> Login
+                  <i class="fa-regular fa-user icon"></i>
+                  <span class="icontext">ログイン</span>
                 <% end %>
               <% end %>
             </div>
           </div>
         </div>
       </nav>
-    
-      <% if flash[:notice] %>
-        <div class="alert alert-light alert-dismissible fade show fixed-top w-auto mt-5 py-2 d-flex align-items-center" role="alert" style="text-align: left;">
-          <strong><%= flash[:notice] %></strong>
-          <button type="button" class="btn-close fixed-top w-auto mt-5 py-2 d-flex align-items-center" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-      <% elsif flash[:alert] %>
-        <div class="alert alert-light alert-dismissible fade show fixed-top w-auto mt-5 py-2 d-flex align-items-center" role="alert" style="text-align: left;">
-          <strong><%= flash[:alert] %></strong>
-          <button type="button" class="btn-close fixed-top w-auto mt-5 py-2 d-flex align-items-center" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-      <% end %>
     
    </header>
     

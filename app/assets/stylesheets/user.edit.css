@@ -1,53 +1,105 @@
 /* style.css */
-/* style.css */
 
 body {
-    font-family: 'Philosopher', serif;
-  }
-  
-  main {
-    text-align: center;
-    margin-top: 10%; /* 上部に余白を設ける */
-  }
-  
-  .alert {
-    margin-top: 20px; /* 上部に余白を設ける */
-  }
-  
-  form {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .btn-success {
-    margin-top: 10%;
-    background-color: rgb(255, 254, 254); /* カーソルが来た時のボタンの色は灰 */
-    color: rgb(0, 0, 0); /* カーソルが来た時の文字の色は白 */
-    border: 1px solid grey;
-  }
-
-  .btn-success:hover {
-  background-color: rgb(59, 59, 59); /* カーソルが来た時のボタンの色は灰 */
-  color: white; /* カーソルが来た時の文字の色は白 */
-  }
-
-/* スタイルの追加 */
-.user-avatar {
-  border-radius: 50%; /* 角を丸くする */
-  overflow: hidden;  /* 内容が枠からはみ出た場合にクリッピング */
-  width: 100px;      /* 幅の指定 */
-  height: 100px;     /* 高さの指定 */
+  font-family: 'Philosopher', serif;
 }
 
-/* カーソルが画像上にあるときにポインターに変更 */
+main {
+  margin-top: 8%;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.update-form {
+  font-family: 'Philosopher' , serif;
+  font-size: 1.5vw;
+  width: 70%;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 8%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.update-form h2 {
+  font-size: 2.5vw;
+  margin-bottom: 5%;
+}
+
+.btn-success {
+  font-size: 1.5vw;
+  margin-top: 2%;
+  background-color: #ffffff; 
+  color: #3f3f3f;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #3f3f3f;
+  color: #ffffff;  
+}
+
+.user-avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 10vw; 
+  height: 10vw; 
+  margin: 0 auto 20px;
+}
+
 .user-avatar img {
   cursor: pointer;
 }
 
-/* サイズ変更後の画像スタイル */
 .user-avatar img {
-  width: 100%; /* 親要素に対して100%の幅に設定 */
-  height: 100%; /* 親要素に対して100%の高さに設定 */
-  object-fit: cover; /* アスペクト比を保ちつつ親要素に収まるように調整 */
-  border-radius: 50%; /* 角を丸くする */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  border-radius: 50%; 
 }
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ユーザー名、メールアドレスのフォームスタイル */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* エラーメッセージのスタイル */
+.invalid-feedback {
+  color: #d9534f;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ボタンのアイコン */
+.btn-success i {
+  margin-right: 5px;
+}
+

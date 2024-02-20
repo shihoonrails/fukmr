@@ -1,20 +1,21 @@
 main {
   font-family: 'Philosopher', serif;
+  font-size: 1.5vw;
   margin: 0;
   padding: 0;
   background-color: white;
 }
 
 .container {
-  width: 80vw; /* コンテナの幅を調整 */
-  height: 90vh;
+  width: 100%;
+  height: auto;
   margin: auto;
-  margin-top: 5%; /* 上部のマージンを調整 */
-  padding: 5%; /* 内部のパディングを追加 */
+  margin-top: 5%;
+  padding: 5%;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  background-color: #fff; /* コンテナの背景色を変更 */
+  background-color: #fff;
 }
 
 .error {
@@ -23,23 +24,28 @@ main {
 }
 
 #title {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
+}
+#title  i {
+  margin-right: 1vw;
+  margin-bottom: 0.5vw;
+  font-size: 1vw;
 }
 
 #content {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
+}
+#content i {
+  margin-right: 1vw;
+  margin-bottom: 0.5vw;
+  font-size: 1vw;
 }
 
 label {
   display: block;
-  color: #333; /* ラベルのテキスト色を変更 */
+  color: #333;
 }
 
-.btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* 垂直方向に中央揃え */
-}
 
 .file-input label {
   display: flex;
@@ -49,17 +55,18 @@ label {
 
 input[type="text"],
 textarea {
-  width: calc(100% - 16px); /* テキストエリアの幅を調整 */
+  font-size: 1vw;
+  width: calc(100% - 16px);
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 10px;
   box-sizing: border-box;
-  border: 1px solid #ccc; /* テキストエリアのボーダーを追加 */
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 textarea {
-  height: 60%;
+  height: 40%;
 }
 
 .file-input input {
@@ -68,9 +75,11 @@ textarea {
 
 .file-input i {
   font-size: 1.5vw;
-  color: #555;
+  color: #666;
   cursor: pointer;
   transition: color 0.3s ease;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .file-input:hover i {
@@ -78,26 +87,34 @@ textarea {
 }
 
 .submit-button {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; 
+  margin-right: 3%; 
 }
+
 
 .submit-button button {
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
-  display: flex;
-  align-items: center;
 }
 
 .submit-button i {
-  font-size: 1.5vw;
+  font-size: 2vw;
   border: none;
-  color: #888;
+  color: #666;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .submit-button:hover i {
   color: #333;
+}
+
+.new {
+  margin-top: 2%;
+  font-family: 'Philosopher', serif;
+  font-size: 1vw;
 }

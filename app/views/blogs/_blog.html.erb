@@ -1,25 +1,21 @@
 
-
-<!-- _blog.html.erb -->
-
-<!-- _blog.html.erb -->
-
 <!-- _blog.html.erb -->
 
 <div id="<%= dom_id blog %>" class="post">
-  <div class="text-center">
+
+
     <div class="user-details">
       <div class="user-avatar" id="avatar"> <!-- ① -->
-        <% if current_user && current_user.avatar.present? %>
-          <%= image_tag current_user.avatar, class: "mb-2 current-avatar", id: "avatar_preview" %>
+        <% if blog.user && blog.user.avatar.present? %>
+          <%= image_tag blog.user.avatar, class: "current-avatar", id: "avatar_preview" %>
         <% else %>
-          <label for="avatarIcon">
-            <%= image_tag "default_avatar.jpg", class: "mb-2 current-avatar", id: "avatar_preview" %>
-          </label>
+        <label for="avatarIcon">
+          <%= image_tag "default_avatar.jpg", class: "current-avatar", id: "avatar_preview" %>
+        </label>
           <input type="file" name="avatar" onchange="avatarImage(this);" accept="image/jpeg,image/gif,image/png" class="custom-file-input" id="avatarIcon" style="display: none;">
         <% end %>
       </div>
-      <h5 class="username"><%= current_user&.name %></h5>
+      <h5 class="usernames"><%= blog.user&.name %></h5>
     </div>
 
     <h3 class="text-left"><%= blog.title %></h3> <!-- ③ -->
@@ -29,14 +25,23 @@
           <%= image_tag(blog.image, size: "300x200", class: "responsive-image") if blog.image.present? %>
         </div>
         <div class="col content-col">
-          <span class="username"><%= blog.content %></span> <!-- ⑤ -->
+          <span class="usercontent"><%= blog.content %></span> <!-- ⑤ -->
         </div>
       </div>
     </div>
     <div class="time-details">
       <span class="post-timestamp"><%= blog.created_at.strftime("%Y-%m-%d %H:%M") %></span> <!-- ⑥ -->
-      <%= link_to "詳細を見る", blog, class: "view-link" %> <!-- ⑦ -->
-    </div>    
+
+      <% if @blog && current_user && @blog.user %>
+        <div class="delete-button-container">
+          <%= button_to blog_path(@blog), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
+            <i class="fa-solid fa-trash"></i> 削除
+          <% end %>
+        </div>
+      <% end %>
+    
+    
+  </div>
   </div>
 </div>
 

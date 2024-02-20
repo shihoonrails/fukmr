@@ -10,16 +10,9 @@
   <body>
     <main>
       <div class="show">
-        <p style="color: green"><%= notice %></p>
-
         <%= render @blog %>
-
-        <div>
-          <%= link_to "ホームへ", blogs_path %>
-          <%= button_to blog_path(@blog), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
-             <i class="fa-solid fa-trash"></i> 削除
-          <% end %>
-
+        <div class="home">
+          <%= link_to "一覧画面へ", blogs_path %>
         </div>
       </div>
 
