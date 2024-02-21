@@ -1,5 +1,6 @@
 main {
   margin-top: 10%;
+  font-family: 'Philosopher', serif;
 }
  .card {
   width: 80%;
@@ -20,6 +21,32 @@ main {
  .h6 {
   font-size: 2vw;
  }
+
+ .mypage {
+  text-align: center; /* 左寄せ */
+  margin-top: 2%; /* 上部の余白 */
+}
+
+.mypagee {
+  text-align: center; /* 左寄せ */
+  margin-top: 2%; /* 上部の余白 */
+}
+
+.mypagee a {
+  color: #2f3030; /* リンクのテキストカラー */
+  text-decoration: none; /* リンクの下線をなくす */
+  font-weight: bold; /* フォントを太字にする */
+  border: 2px solid #979797; /* リンクのボーダー */
+  padding: 10px 20px; /* パディング */
+  border-radius: 5px; /* ボーダーの角を丸くする */
+  display: inline-block; /* インラインブロックとして表示 */
+  transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.mypagee a:hover {
+  background-color: #333333; /* ホバー時の背景色 */
+  color: #FFF; /* ホバー時のテキストカラー */
+}
 
  .card-body {
      width: 80%;
@@ -190,6 +217,34 @@ main {
       font-size: 2vw;
     }
   
+    .mypage {
+      text-align: center; /* 左寄せ */
+      margin-top: 10%; /* 上部の余白 */
+      font-size: 3vw;
+    }
+
+    .mypagee {
+      text-align: center; /* 左寄せ */
+      margin-top: 10%; /* 上部の余白 */
+      font-size: 3vw;
+    }
+    
+    .mypagee a {
+      color: #2f3030; /* リンクのテキストカラー */
+      text-decoration: none; /* リンクの下線をなくす */
+      font-weight: bold; /* フォントを太字にする */
+      border: 2px solid #979797; /* リンクのボーダー */
+      padding: 5px 10px; /* パディング */
+      border-radius: 5px; /* ボーダーの角を丸くする */
+      display: inline-block; /* インラインブロックとして表示 */
+      transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+    }
+
+    .mypagee a:hover {
+      background-color: #333333; /* ホバー時の背景色 */
+      color: #FFF; /* ホバー時のテキストカラー */
+    }
+
     .card-body {
       width: 100%;
       font-family: 'Philosopher', serif;

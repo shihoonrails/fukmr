@@ -19,8 +19,15 @@ class UsersController < ApplicationController
       # Uncomment and configure according to your mailer settings
       # UserMailer.with(user: @user).account_activation.deliver_now
 
-      flash[:notice] = "アカウント認証メールを送信しました。メールが届きましたら、24時間以内に本文記載の有効化リンクをクリックしてアカウントを認証してください。"
+      flash[:notice] = "サインアップに成功しました。"
       redirect_to root_url
+    else
+      render "new", status: :unprocessable_entity
+    end
+
+    if @user.save
+      flash[:success] = "サインアップに成功しました！"
+      redirect_to user_path(@user)
     else
       render "new", status: :unprocessable_entity
     end
