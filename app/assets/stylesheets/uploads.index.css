@@ -266,26 +266,302 @@ p {
 
   /* 携帯画面用スタイル */
 @media screen and (max-width: 768px) {
-  #carouselExampleCaptions {
-    margin-top: 80px;
-  }
-  .carousel-caption h2 {
-    font-size: 5vw; 
-  }
-  .carousel-caption p {
-    font-size: 2vw; 
+  .main {
+    font-family: 'Philosopher' , serif;
   }
   
+  h2 {
+    color: #e7e5e5;
+    font-size: 3vw;
+  }
+  
+  p {
+    color: #e7e5e5;
+    font-size: 2vw;
+    margin-top: 1.5%;
+  }
+  /* 外部CSSファイル（例：styles.css） */
+
+/* スライドキャプションに上部余白を設定 */
+.carousel-caption {
+  margin-top: 20px; /* 適切な余白サイズに調整 */
+}
+
+/* カルーセルコントロール（Prev / Next ボタン）のスタイルを調整 */
+.carousel-control-prev,
+.carousel-control-next {
+  margin-top: 10px; 
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+/* カルーセル内の画像に上部余白を設定 */
+.carousel-inner img {
+  margin-top: 20px; /* 適切な余白サイズに調整 */
+}
+
+  /* インディケーターのボタン */
+  .carousel-indicators button {
+    width: 1vw !important;
+    height: 0.1vw !important;
+    margin-top: 3vw !important;
+    padding-top: 3vw;
+    font-size: 0.8vw !important; /* 必要に応じて調整 */
+    background-color: #888; 
+    border: none;
+    opacity: 0.7; 
+    transition: opacity 0.3s ease; 
+  }
+  .carousel-indicators button.active {
+    background-color: #555; 
+    opacity: 1; 
+  }
+  
+  #carouselExampleCaptions {
+    max-width: 100%; 
+    height: auto;
+    margin: auto; 
+    position: relative; 
+    text-align: center; 
+  }
+  
+  .carousel-caption {
+    font-family: 'Philosopher', serif;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-top: 3%;
+  }
+  
+  .carousel-item {
+    font-family: 'Philosopher' , serif;
+    position: relative;
+    margin-top: 5vw;
+  }
+  
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* 黒のRGB値と透明度を指定 */
+  }
+  
+  
+  .carousel-inner {
+      color: black;
+  }
+
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+  .btn-container {
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+  
+  .btn-custom {
+    font-family: 'Philosopher', serif;
+    font-size: 2vw;
+    background-color: #fff; /* 白 */
+    color: #5a5a5a; /* 黒 */
+    padding-top: 3%;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    color: #000000; /* ホバー時の文字色 */
+  }
+  
+  
+  .newpost {
+      font-family: 'Philosopher' , serif;
+      text-align: left;
+  }
+  
+  .post-item {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  .title {
+    text-align: left;
+    margin-left: 4%;
+    font-size: 2vw;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  
+  .img-thumbnail {
+    margin-left: 4%;
+  }
+  
+  .body {
+    text-align: center;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  .link-container {
+    text-align: center;
+    margin-top: 1em; 
+  }
+  
+  /* styles.css */
+  
+  .post {
+    width: 80%;
+    margin: 1% auto;
+    padding: 3%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* user-details以下 */
+  
   .user-details {
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    height: 3vw;
+    margin-bottom: 1vw;
   }
-
   .user-avatar {
-    margin-bottom: 10px;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    object-fit: cover;
   }
-
-  .username {
-    margin-left: 0;
+  #avatar {
+    margin-right: 2vw; 
+  }
+  #avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .usernames {
+    font-family: 'Philosopher' , serif;
+    margin-top: 10px;
+    font-size: 2vw;
+  }
+  
+  /* text-left以下 */
+  
+  .content-col {
+    padding-left: 20px; 
+  }
+  
+  .text-left {
+    font-family: 'Philosopher' , serif;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 3vw;
+  }
+  
+  .post-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    color: #555;
+  }
+  
+  .usercontent {
+    font-family: 'Philosopher' , serif;
+    margin-left: 0.5%; 
+    font-size: 2vw;
+    align-self: center; 
+  }
+  
+  
+  
+  .responsive-image {
+    width: 100%; /* 画面幅に対して100% */
+    height: auto; /* アスペクト比を維持しつつ幅に合わせて変化 */
+  }
+  
+  .time-details {
+    font-family: 'Philosopher' , serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+    color: #555;
+    font-size: 2vw;
+  }
+  
+  .no-posts {
+    color: #333;
+    font-style: italic;
+  }
+  
+  .delete-button-container {
+    text-align: right;
+    font-size: 1vw;
+  }
+  
+  .delete-button-container button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    padding: 1vw;
+    color: #000000; 
+    transition: color 0.3s ease; 
+  }
+  
+  .delete-button-container button:hover {
+    color: #f0f0f0; 
+    background-color: #1f1f1f;
+    border-radius: 13%;
+  }
+  
+  /* app/views/blogs/show.html.erb */
+  .show {
+    margin-top: 20%;
+  }
+  
+  .home {
+    text-align: center;
+    margin: 5%;
+  }
+  
+  .home a {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-family: 'Philosopher' , serif;
+    padding: 0.5vw;
+    font-size: 3vw;
+  }
+  
+  .home a:hover {
+    color: #f0f0f0; 
+    background-color: #1f1f1f;
+    border-radius: 20%;
   }
 }
 

@@ -8,4 +8,9 @@
   .custom-text:hover {
     color: #000; /* ホバー時の色（通常時と同じにすることで変化が見えなくなります） */
   }
-  
+
+@media screen and (max-width: 768px) {
+    .custom-text {
+        font-size: 4vw; /* 任意の携帯画面用フォントサイズを指定 */
+    }
+}

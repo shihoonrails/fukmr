@@ -124,3 +124,129 @@ textarea {
   font-family: 'Philosopher', serif;
   font-size: 1vw;
 }
+
+@media only screen and (max-width: 768px) {
+  main {
+    font-family: 'Philosopher', serif;
+    margin: 5%;
+    background-color: white;
+  }
+  
+  .container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 30%;
+    padding: 5%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .error {
+    font-size: 3vw;
+    color: #e74c3c; /* エラーメッセージの色を変更 */
+    font-weight: bold; /* エラーメッセージを太字にする */
+  }
+  
+  #title {
+    font-size: 3vw;
+  }
+  #title  i {
+    margin-bottom: 0.5vw;
+    font-size: 3vw;
+  }
+  
+  #content {
+    font-size: 3vw;
+  }
+  #content i {
+    margin-right: 2vw;
+    margin-bottom: 0.5vw;
+    font-size: 3vw;
+  }
+  
+  label {
+    display: block;
+    color: #333;
+  }
+  
+  input[type="text"],
+  textarea {
+    font-size: 3vw;
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    height: 20%;
+  }
+  
+  .file-input input {
+    display: none;
+  }
+  
+  .file-input i {
+    font-size: 4vw;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .file-input:hover i {
+    color: #333;
+  }
+  
+  .file {
+    font-size: 2vw;
+  }
+  
+  
+  .image-preview img {
+    max-width: 50%;
+    max-height: 70%;
+    margin: 3%;
+    border-radius: 5%;
+  }
+  
+  .submit-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    margin-right: 3%; 
+  }
+  
+  
+  .submit-button button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .submit-button i {
+    font-size: 5vw;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .submit-button:hover i {
+    color: #333;
+  }
+  
+  .new {
+    margin-top: 2%;
+    font-family: 'Philosopher', serif;
+    font-size: 2vw;
+  }
+}

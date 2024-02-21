@@ -2,8 +2,6 @@
 <!-- _blog.html.erb -->
 
 <div id="<%= dom_id blog %>" class="post">
-
-
     <div class="user-details">
       <div class="user-avatar" id="avatar"> <!-- ① -->
         <% if blog.user && blog.user.avatar.present? %>
@@ -31,19 +29,15 @@
       <span class="post-timestamp"><%= blog.created_at.in_time_zone("Tokyo").strftime("%Y-%m-%d %H:%M") %></span>
 
       <% if blog.user == current_user %>
-      <div class="delete-button-container">
-        <%= button_to blog_path(blog), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
-          <i class="fa-solid fa-trash"></i> 削除
-        <% end %>
-      </div>
-    <% end %>
-
-  </div>
-    
-    
-  </div>
-  </div>
+        <div class="delete-button-container">
+          <%= button_to blog_path(blog), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
+            <i class="fa-solid fa-trash"></i> 削除
+          <% end %>
+        </div>
+      <% end %>
+    </div> 
 </div>
+
 
 
 

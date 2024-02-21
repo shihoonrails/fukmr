@@ -103,3 +103,111 @@ main {
   margin-right: 5px;
 }
 
+@media screen and (max-width: 768px) {
+  /* style.css */
+
+  body {
+    font-family: 'Philosopher', serif;
+  }
+
+  main {
+    margin-top: 20%;
+  }
+
+  .alert {
+    margin-top: 20px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .update-form {
+    font-family: 'Philosopher' , serif;
+    font-size: 4vw;
+    width: 70%;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 8%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .update-form h2 {
+    font-size: 3vw;
+    margin-bottom: 5%;
+  }
+
+  .btn-success {
+    font-size: 3vw;
+    margin-top: 2%;
+    background-color: #ffffff; 
+    color: #3f3f3f;
+    border: none;
+  }
+
+  .btn-success:hover {
+    background-color: #3f3f3f;
+    color: #ffffff;  
+  }
+
+  .user-avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 10vw; 
+    height: 10vw; 
+    margin: 0 auto 20px;
+  }
+
+  .user-avatar img {
+    cursor: pointer;
+  }
+
+  .user-avatar img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 50%; 
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    font-weight: bold;
+    display: block;
+  }
+
+  .form-control {
+    font-size: 3vw;
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* ユーザー名、メールアドレスのフォームスタイル */
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* エラーメッセージのスタイル */
+  .invalid-feedback {
+    color: #d9534f;
+    display: block;
+    margin-top: 5px;
+  }
+
+  /* ボタンのアイコン */
+  .btn-success i {
+    margin-right: 5px;
+  }
+}
+
