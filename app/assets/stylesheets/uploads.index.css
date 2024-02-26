@@ -68,25 +68,15 @@ p {
     color: black;
 }
 
-.btn-container {
-  text-align: center;
-  margin-top: 2%;
-}
-
-.btn-custom {
+.post-view {
   font-family: 'Philosopher', serif;
+  text-align: center;
+  background-color: #fff;
   font-size: 2vw;
-  background-color: #fff; /* 白 */
-  color: #5a5a5a; /* 黒 */
-  padding-top: 3%;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 2%;
+  padding: 1%;
+  color: #525252;
 }
-
-.btn-custom:hover {
-  color: #000000; /* ホバー時の文字色 */
-}
-
 
 .newpost {
     font-family: 'Philosopher' , serif;
@@ -127,7 +117,7 @@ p {
   margin-top: 1em; 
 }
 
-/* styles.css */
+/* _blog.html.erb */
 
 .post {
   width: 80%;
@@ -196,8 +186,6 @@ p {
   font-size: 1.5vw;
   align-self: center; 
 }
-
-
 
 .responsive-image {
   width: 100%; /* 画面幅に対して100% */
@@ -365,26 +353,15 @@ p {
   height: 1rem !important;
 }
 
-  .btn-container {
-    text-align: center;
-    margin-top: 4%;
-    margin-bottom: 4%;
-  }
-  
-  .btn-custom {
-    font-family: 'Philosopher', serif;
-    font-size: 2vw;
-    background-color: #fff; /* 白 */
-    color: #5a5a5a; /* 黒 */
-    padding-top: 3%;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .btn-custom:hover {
-    color: #000000; /* ホバー時の文字色 */
-  }
-  
+.post-view {
+  font-family: 'Philosopher', serif;
+  text-align: center;
+  background-color: #fff;
+  font-size: 2vw;
+  margin: 2%;
+  padding: 1%;
+  color: #5a5a5a;
+}
   
   .newpost {
       font-family: 'Philosopher' , serif;
