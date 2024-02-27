@@ -28,13 +28,18 @@
     <div class="time-details">
       <span class="post-timestamp"><%= blog.created_at.in_time_zone("Tokyo").strftime("%Y-%m-%d %H:%M") %></span>
 
-      <% if blog.user == current_user %>
-        <div class="delete-button-container">
-          <%= button_to blog_path(blog), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
-            <i class="fa-solid fa-trash"></i> 削除
+      <% if current_page?(controller: 'blogs', action: 'index') %>
+      <!-- indexページの場合、何も表示しない -->
+        <% else %>
+          <% if blog.user == current_user %>
+            <div class="delete-button-container">
+              <%= button_to blog_path(blog), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
+                <i class="fa-solid fa-trash"></i> 削除
+              <% end %>
+            </div>
           <% end %>
-        </div>
       <% end %>
+      
     </div> 
 </div>
 
