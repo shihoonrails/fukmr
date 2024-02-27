@@ -33,7 +33,7 @@
         <% else %>
           <% if blog.user == current_user %>
             <div class="delete-button-container">
-              <%= button_to blog_path(blog), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
+              <%= button_to blog_path(blog), method: :delete, :onclick => "return check_form()" do %>
                 <i class="fa-solid fa-trash"></i> 削除
               <% end %>
             </div>
@@ -42,6 +42,16 @@
       
     </div> 
 </div>
+
+<script>
+  function check_form() {
+    // 確認ダイアログを表示し、OK ボタンが押された場合に true を返す
+    var confirmed = window.confirm("削除しますか？");
+    
+    // OK ボタンが押された場合のみフォームを送信
+    return confirmed;
+  }
+</script>
 
 
 
