@@ -77,6 +77,8 @@ gem "active_storage_validations"
 gem 'aws-sdk-s3', require: false
 gem 'fog-aws'
 
+gem 'friendly_id'
+
 group :production, :staging do
   gem 'unicorn'
 end

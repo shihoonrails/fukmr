@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1 or /blogs/1.json
   def show
-    @blog = Blog.find(params[:id])
+    @blog = Blog.friendly.find(params[:id])
     @blogs = current_user
   end
 
@@ -55,7 +55,7 @@ class BlogsController < ApplicationController
 
   # DELETE /blogs/1 or /blogs/1.json
   def destroy
-    @blog = Blog.find(params[:id])
+    @blog = Blog.friendly.find(params[:id])
   
     # ユーザーが正しいかどうかを確認
     if current_user == @blog.user
@@ -71,7 +71,7 @@ class BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
-      @blog = Blog.find(params[:id])
+      @blog = Blog.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
