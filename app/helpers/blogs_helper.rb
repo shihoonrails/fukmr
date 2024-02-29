@@ -9,6 +9,8 @@ module BlogsHelper
           "bg-orange"
         when "温泉"
           "bg-blue"
+        when "その他"
+          "bg-blue"
         else
           "bg-black"  # default color
         end
