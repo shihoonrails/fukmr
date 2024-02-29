@@ -14,15 +14,33 @@
       <h5 class="usernames"><%= blog.user&.name %></h5>
     </div>
 
-    <h3 class="text-left"><%= blog.title %></h3> <!-- ③ -->
+    <h3 class="text-left"><%= blog.title %></h3>
+    <% if request.path == blog_path(blog) %>
+    <%= content_tag(:span, blog.faculty, class: "text-right #{faculty_background_class(blog.faculty)}") %>
+    <%= content_tag(:span, blog.rating, class: "text-right #{rating_background_class(blog.rating)}") %>
+    <% else %>
+
+    <% end %>
+
     <div class="post-details">
       <div class="row">
+        <% if controller_name == 'blogs' && action_name == 'index' %>
         <div class="col">
-          <%= image_tag(blog.image, size: "300x200", class: "responsive-image") if blog.image.present? %>
+          <%= image_tag(blog.image, size: "1500*1300", class: "responsive-image") if blog.image.present? %>
         </div>
-        <div class="col content-col">
-          <span class="usercontent"><%= blog.content %></span> <!-- ⑤ -->
+      <% else %>
+        <div class="col">
+          <%= image_tag(blog.image, size: "300*200", class: "responsive-image") if blog.image.present? %>
         </div>
+      <% end %>
+      <div class="col content-col">
+        <% if request.path == blog_path(blog) %>
+          <span class="usercontent"><%= blog.content %></span>
+        <% else %>
+        <span class="text-right"><%= blog.faculty %></span> 
+        <span class="text-right"><%= blog.rating %></span>
+        <% end %>
+      </div>
       </div>
     </div>
     <div class="time-details">
@@ -40,6 +58,12 @@
           <% end %>
       <% end %>
       
+
+      <% if request.path == blog_path(blog) %>
+      
+      <% else %>
+       <%= link_to '詳細を見る', blog_path(blog), style: 'text-decoration: none; border-bottom: 1px solid #c7c7c7; outline: none; background: none; cursor: pointer; padding: 0.5vw; color: #000000; ', class: 'custom-link' %>
+      <% end %>
     </div> 
 </div>
 

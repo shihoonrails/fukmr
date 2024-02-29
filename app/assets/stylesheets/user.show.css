@@ -149,8 +149,19 @@ main {
     font-size: 1.5vw;
     align-self: center; 
   }
-  
-  
+
+
+  .text-right {
+    font-family: 'Philosopher', serif;
+    text-align: right;
+    font-size: 1vw;
+    color: rgb(0, 0, 0);
+    border: 1px solid #535353;
+    border-radius: 10%;
+    padding: 5px; /* パディングを追加して枠線とテキストの間にスペースを作成 */
+    margin: 2%;
+    display: inline-block; /* インライン要素をブロック要素に変更して、横幅をテキストに合わせる */
+  }
   
   .responsive-image {
     width: 100%; /* 画面幅に対して100% */

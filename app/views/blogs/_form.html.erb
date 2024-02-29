@@ -35,10 +35,12 @@
             <%= form.label :title, raw('<i class="fas fa-map-marker-alt"></i>場所・お店'), id: "title" %>
             <%= form.text_field :title, placeholder: "おすすめの場所を教えてください。" %>
           </div>
-    
+
+          <%= form.select :faculty, [["自然", "自然"], ["カフェ", "カフェ"], ["ごはん", "ごはん"], ["温泉", "温泉"], ["その他", "その他"]], include_blank: "ジャンルを選択してください" %>
+          <%= form.select :rating, [["とても良い", "とても良い"], ["良い", "良い"], ["普通", "普通"], ["あまり...", "あまり..."]], include_blank: "どんな風に感じましたか？" %>
           <div>
             <%= form.label :content, raw('<i class="fas fa-star"></i>ポイント'), id: "content" %>
-            <%= form.text_area :content, placeholder: "どんな場所でしたか？" %>
+            <%= form.text_area :content, placeholder: "どんな場所でしたか？たくさん教えて下さい!" %>
           </div>
     
           <div class="file-input">

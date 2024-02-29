@@ -172,6 +172,17 @@ p {
   font-size: 1.5vw;
 }
 
+.text-right {
+  font-family: 'Philosopher', serif;
+  text-align: right;
+  font-size: 1vw;
+  color: rgb(0, 0, 0);
+  border: 1px solid #535353;
+  border-radius: 10%;
+  padding: 5px; /* パディングを追加して枠線とテキストの間にスペースを作成 */
+  display: inline-block; /* インライン要素をブロック要素に変更して、横幅をテキストに合わせる */
+}
+
 .post-details {
   display: flex;
   justify-content: space-between;
@@ -200,6 +211,10 @@ p {
   margin-top: 10px;
   color: #555;
   font-size: 12px;
+}
+
+.custom-link:hover {
+  border-radius: 10%;;
 }
 
 .no-posts {
@@ -243,12 +258,12 @@ p {
   color: #1f1f1f;
   font-family: 'Philosopher' , serif;
   padding: 0.5vw;
+  margin: 5%;
 }
 
 .home a:hover {
-  color: #f0f0f0; 
-  background-color: #1f1f1f;
-  border-radius: 20%;
+  color: #111111;
+  background-color: #e9e9e9;
 }
 
 

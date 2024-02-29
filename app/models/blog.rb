@@ -7,4 +7,6 @@ class Blog < ApplicationRecord
     validates :title, presence: true
     validates :content, presence: true
     validates :image, presence: true
+    validates :faculty, presence: true
+    validates :rating, presence: true
 end
