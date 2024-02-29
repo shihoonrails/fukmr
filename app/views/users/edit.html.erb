@@ -25,7 +25,7 @@
     <div class="container">
       <div class="update-form">
         <h2>編集</h2>
-        <%= form_for @user do |f| %>
+        <%= form_for @user, method: :patch, url: user_path do |f| %>
           <div class="user-avatar" id="avatarLabel">
             <% if @user.avatar.attached? %>
               <%= image_tag @user.avatar, width: 200, class: "mb-2", id: "avatar_preview" %>

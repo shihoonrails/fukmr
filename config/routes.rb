@@ -6,8 +6,6 @@ Rails.application.routes.draw do
       end
     end
 
-    # after_sign_out_path_for メソッドを定義
-
   resource :user, except: [:new, :create, :destroy]
 
   root to: 'blogs#index'
